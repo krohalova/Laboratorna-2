@@ -1,6 +1,10 @@
 /*
  * Decompiled with CFR 0.139.
  */
+/**
+ * @author krohalova
+ * @versin 1.0
+ */
 import java.awt.BasicStroke;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -34,6 +38,7 @@ implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent arg0) {
+    /*Invoked when an action occurs.*/
         if (this.is_done) {
             this.repaint();
         }
@@ -48,6 +53,7 @@ implements ActionListener {
         int w = size.width - insets.left - insets.right;
         int h = size.height - insets.top - insets.bottom;
         ShapeFactory shape = new ShapeFactory(this.shape);
+        /*Sets the Stroke for the Graphics2D context*/
         this.g2d.setStroke(shape.stroke);
         this.g2d.setPaint(shape.paint);
         double angle = this.start_angle++;
