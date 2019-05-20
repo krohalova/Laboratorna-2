@@ -1,5 +1,8 @@
-/*
- * Decompiled with CFR 0.139.
+/**
+ * @author krohalova
+ * @versin 1.0
+ *
+ * This file contains the creation of objects, drawing objects. Constructive selects through switch statement
  */
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -34,9 +37,14 @@ public class ShapeFactory {
                 break;
             }
             case 7: {
+                /*Constructs a new empty single precision GeneralPath object with a default winding rule of*/
                 GeneralPath path = new GeneralPath();
                 double tmp_height = Math.sqrt(2.0) / 2.0 * (double)this.height;
+                /* Adds a point to the path by moving to the specified coordinates specified in double precision.
+ *@param: x - the specified X coordinatey - the specified Y coordinate*/
                 path.moveTo((double)(-this.width / 2), -tmp_height);
+                /*Adds a point to the path by drawing a straight line from the current coordinates to the new specified coordinates specified in double precision.)
+ *@Param: x - the specified X coordinatey - the specified Y coordinate */
                 path.lineTo(0.0, -tmp_height);
                 path.lineTo((double)(this.width / 2), tmp_height);
                 path.closePath();
